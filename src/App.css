@@ -1,38 +1,1363 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Dancing+Script:wght@500&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cinzel:wght@500&family=Dancing+Script:wght@500&family=Playfair+Display&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+.app-wrapper {
+  position: relative;
+  background-color: #fff; /* Add your background color here */
+  padding: 0px; /* Add padding or adjust as needed */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
+  background-color: rgb(34, 34, 109);
+  height: 30px;
+  color: #ffc800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.x-symbol {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffc800;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.show-content {
+  transform: rotate(-90deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  cursor: pointer;
+}
+
+.show-app {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.top-head{
+  padding-top: 5px;
+  font-size: 16px ;
+}
+/* ----------------------------- */
+.header-top{
+  width: 100%;
+  height: 90px;
+  position: sticky;
+  top: 0;
+  z-index: 100; 
+  background-color: #ffffff; 
+}
+
+
+.head-container{
+  width: 80%;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  height: 80px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.left-head{
+  width: 20%;
+  /* border: 1px solid red; */
+  text-align: left;
+  margin-top: 8px;
+  float: left;
+}
+.image-logo{
+  width: 85%;
+  height: 50px;
+  cursor: pointer;
+}
+.center-head{
+  width: 45%;
+  text-align: center;
+  margin-top: 5px;
+  /* border: 1px solid green; */
+  float: left;
+  height: 54px;
+  /* margin-left: 20px; */
+}
+.search-bar {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  
+}
+
+.search-input {
+  border: none;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: rgb(230, 230, 230);
+  color:rgb(24, 24, 113);
+  margin: 0 auto;
+  width: 85%;
+  height: 30px;
+  font-size: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn-input {
+  width: 100%;
+  color: rgb(24, 24, 113);
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  /* padding: 10px 20px; */
+  /* margin-left: 10px; */
+  cursor: pointer;
+  background-color: white;
+
+}
+.icon-search{
+  /* width: 30%; */
+  position: absolute;
+  float: right;
+  font-size: 30px;
+  padding-top: 10px;
+  left: 480px;
+  bottom: 10px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #ffffff;
+  color: #1717639e;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  padding-top: 24px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+}
+
+.dropdown-content-head {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content-head a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown:hover .dropdown-content-head {
+  display: block;
+}
+.right-head{
+  width: 35%;
+  float: right; 
+  /* margin-top: 8px; */
+}
+.icon-container {
+  float: right;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.icon {
+  color: orange;
+  font-size: 24px;
+  margin-left: 10px; 
+}
+.horizontal-line{
+  opacity: 0.1;
+  
+}
+
+/* --------------------------------- */
+.outline-icon{
+  font-weight: 600;
+  margin-right: 5px;
+  padding-top: 0px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  width: 100%;
+  height: 70px;
+  
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px; 
+  /* margin-bottom: 30px; */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #120e4f; 
+  font-weight: 500;
+  padding: 3px;
+  font-size: 16px;
+}
+.navbar a:hover{
+  color: orange;
+}
+.right-content{
+  width: 20%;
+  color: rgb(18, 23, 124);
+  padding-left: 15px;
+  /* margin-bottom: 30px; */
+}
+/* Rest of your existing CSS */
+
+/* Style for the dropdown container */
+.left-content {
+  width: 60%;
+  margin-left: 145px;
+  position: relative;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  z-index: 2; 
+  /* background-color: #f90000; */
+  /* width: 200%; */
+  padding-top: 40px;
+  box-shadow: 0 4px 8px rgb(185, 0, 0);
+  border:2px solid #0000003e;
+}
+.dropdown-content.active {
+  display: block;
+  position: fixed;
+  top: 90px; /* Adjust as needed */
+  left: 90px;
+}
+
+.navbar .left-content .dropdown-content {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  display: none;
+  width: 100%;
+  padding-top: 40px;
+  box-shadow: 0 9px 8px  rgb(60, 60, 60);
+}
+
+.navbar .left-content .dropdown-content {
+  height: 500px;
+  width: 150%;
+  margin-right: 100px;
+}
+
+.navbar .left-content:hover .dropdown-content {
+  display: block;
+}
+
+.navbar .left-content .dropdown-content ul {
+  list-style: none;
+  padding-left: 0px;
+  padding-top: 0px;
+  right: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .left-content .dropdown-content ul li {
+  width: 10%;
+  text-align: center;
+  margin-right: 90px; 
+  margin-bottom: 10px;
+ 
+}
+.list-hp{
+  color: red;
+}
+.navbar .left-content .dropdown-content a {
+  text-decoration: none;
+  color: #21177e;
+  /* display: block; */
+  padding: 5px;
+  /* padding-left: 10px; */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+  /* right: 300px; */
+}
+
+.navbar .left-content .dropdown-content a:hover {
+  background-color: none;
+  color: #ff8000;
+  
+}
+.navbar .left-content .dropdown-content ul li:nth-child(8n + 1) {
+  font-weight: bold;
+}
+.carousel-container {
+  position: relative;
+  margin-top: 0px;
+  
+}
+
+.carousel-button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.205);
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.left {
+  left: 10px;
+  width: 40px;
+}
+
+.right {
+  right: 10px;
+  width: 40px;
+}
+
+.carousel-image-container {
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-image-container img {
+  flex: 1;
+  object-fit: cover;
+}
+.carousel-image {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  
+}
+.carousel-image.fade-out {
+  opacity: 0.3;
+}
+
+.carousel-image-button {
+  position: absolute;
+  top: 75%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  background: rgb(252, 99, 11);
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 90px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 20px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 800;
+  border: none;
+}
+
+.carousel-image-text {
+  position: absolute;
+  bottom: 200px;
+  left: 280px;
+  transform: translateX(-50%);
+  color: rgb(18, 18, 103);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 60px;
+  font-family: 'Cabin', sans-serif;
+  width: 15%;
+  text-align: center;
+  font-weight: 900;
+}
+.carousel-image-button:hover{
+  background-color: rgb(14, 14, 82);
+  color: rgb(255, 255, 255);
+}
+
+/* --------------------------------- */
+.image-row {
+  display: flex;
+  margin-left: 100px;
+ overflow: hidden;
+ height: auto;
+}
+
+.image-container {
+  text-align: center;
+  margin-left: 35px;
+  margin-top: 40px;
+  overflow: hidden;
+  height: auto;
+}
+
+.image-container img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform 0.3s;
+ overflow: hidden;
+}
+
+.image-container p {
+  position: absolute;
+  /* margin-top: 10px; */
+  margin-left: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  bottom: 4800px;
+ text-align: left;
+  width: 15%;
+  overflow: hidden;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+.text-3{
+  color:#fefefe;
+}
+.text-1, .text-2{
+  color:#120e4f;
+  
+}
+.btn-shop-3{
+  color: rgb(255, 255, 255);
+  background-color: #0f1f66;
+  position: absolute;
+  right: 360px;
+  /* top: 60px; */
+  font-size: 20px;
+  margin-top: 190px;
+  border-radius: 20px;
+  font-weight: 900;
+  font-family: 'Cabin', sans-serif; 
+  border: none;
+  padding: 10px 20px;
+}
+.btn-shop-1{
+  color: rgb(255, 255, 255);
+  background-color: #0f1f66;
+  position: absolute;
+  right: 1260px;
+  /* top: 60px; */
+  font-size: 20px;
+  border: none;
+  margin-top: 190px;
+  border-radius: 20px;
+  font-weight: 900;
+  font-family: 'Cabin', sans-serif;
+  padding: 10px 20px;
+}
+.btn-shop-2{
+  color: rgb(255, 255, 255);
+  background-color: #0f1f66;
+  position: absolute;
+  right: 800px;
+  border: none;
+  /* top: 60px; */
+  font-size: 20px;
+  margin-top: 190px;
+  border-radius: 20px;
+  font-weight: 900;
+  font-family: 'Cabin', sans-serif;
+  padding: 10px 20px;
+}
+.btn-shop-1:hover, .btn-shop-2:hover, .btn-shop-3:hover{
+  background-color: orange;
+}
+/* --------------------------------- */
+
+.image-gallery {
+  display: flex;
+  padding-left: 100px;
+  /* border: 1px solid red; */
+}
+
+.image-card {
+  text-align: center;
+  /* margin: 10px; */
+  /* border: 1px solid blue; */
+  background-color: rgba(128, 128, 128, 0.142);
+  width: 15.9%;
+  margin-left: 30px;
+  position: relative;
+
+}
+
+.gallery-image {
+  
+  max-width: 190px;
+  height: 250px;
+}
+
+.image-text {
+  position: absolute;
+  margin-top: 0px;
+  font-size: 18px;
+  bottom: 220px;
+  left: 10px;
+  color:rgb(18, 18, 103);
+  font-family: 'Cabin', sans-serif;
+  font-weight: 800;
+  
+}
+
+.image-button {
+  position: absolute;
+  background-color: #ffffff;
+  color: rgb(14, 14, 82);
+  border: none;
+  padding: 10px 25px;
+  margin-top: 40px;
+  cursor: pointer;
+  right: 135px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+}
+.image-button:hover{
   color: white;
+  background-color: rgb(14, 14, 82);
+  transition: background-color 1s;
+}
+.small-head{
+  color: #120e4f;
+  font-family: 'Cabin', sans-serif;
+}
+/* ----------------------------------------------------------------- */
+.Link-grid{
+  width: 82%;
+  height: 400px;
+  
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.row-1{
+  float: left;
+  color: #0f1f66;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+}
+.row-2, .row-3, .row-4, .row-5, .row-6{
+  float: left;
+  margin-left: 80px;
+  color:#0f1f66;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+}
+.row-head{
+  margin-top: 40px;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+.row-head:hover{
+  color:#ff8000;
+  transition: transform(1s);
+  text-decoration: underline;
+}
+.row-list{
+  margin-top: 20px;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+  
+}
+.row-list:hover{
+  color:#ff8000;
+  text-decoration: underline;
+}
+/* CSS */
+.up-arrow-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #c4c4c43c; /* Change this to your desired background color */
+  border: none;
+  transition: transform 0.3s;
+  color: #000000b1;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.up-arrow-button:hover{
+  color:#0f1f66;
+  background-color: #ff8000;
+  transform: rotate(180deg);
+}
+/* Custom styles for the Simple Image Carousel */
+/* -------------------------------------------- */
+.simple-slider {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #0074d9;
+  color: #f20e0e;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-prev {
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  background-color: #00030819;
+
+}
+
+.custom-next {
+  float: right;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  background-color: #8f8f8f42;
+  bottom: 395px;
+}
+.product-heading{
+  color: #120e4f;
+  font-family: 'Cabin', sans-serif;
+  font-size: 45px;
+}
+/* Style for the carousel images and captions */
+.slide {
+  text-align: center;
+  padding: 20px;
+  
+}
+
+.image {
+  max-width: 100%;
+  border: 1px solid #7d7d7d4d;
+  border-radius: 8px;
+  padding-bottom: 70px;
+ cursor: pointer;
+ 
+}
+.image:hover{
+  opacity: 0.1;
+}
+.cart-icon {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #121b79; 
+  bottom: 270px;
+  padding-left: 89px;
+}
+.heart-icon{
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  color: #ff0000; 
+  bottom: 290px;
+  padding-left: 89px;
+}
+.caption {
+  
+  position: relative;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #1b105cc2;
+  bottom: 90px;
+  margin-right: 120px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  width: 200px;
+  text-decoration: none;
+}
+.caption:hover{
+  font-weight: 900;
+}
+.stars{
+  position: absolute;
+  color: rgb(255, 181, 43);
+  bottom: 60px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+.Rate{
+  position: absolute;
+  color: #1b105cc2;
+  font-weight: 500;
+  bottom: 80px;
+  padding-left: 15px;
+}
+/* --------------------------------- */
+.Box-Container{
+ width: 100%;
+ margin-top: 100px;
+ height: 100px;
+ background-color: rgba(149, 248, 151, 0.208);
+}
+.Box-text{
+  width: 60%;
+  font-size: 25px;
+  color: green;
+  float: left;
+  text-align: left;
+  font-family: 'Cabin', sans-serif;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+.bold{
+  font-weight: 900; 
+}
+.Box-image{
+  position: relative;
+  width: 20%;
+  float: left;
+  overflow:visible;
+}
+.img-gift{
+  position: absolute;
+  object-fit: contain;
+  height: 130px;
+  width: 150px;
+  right: 80px;
+  overflow: hidden;
+}
+.btn-Box{
+  
+  float: rigth;
+  margin-left: 200px;
+  margin-top: 45px;
+  background-color: green;
+  color: rgb(255, 255, 255);
+  font-family: 'Cabin', sans-serif;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  text-rendering: none;
+  transition: background-color 1s;
+}
+.btn-Box:hover{
+  background-color: white;
+  color: green;
+  border: 1px solid green;
+  text-decoration: none;
+}
+/* ------------------------------- */
+ .time-timer, .time-timer-1, .time-timer-2, .time-timer-3{
+  font-size: 35px;
+  background-color: orange;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  width: 60%;
+  padding: 7px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  margin: 5px;
+  
+ }
+ .head-timer{
+  float: left;
+  font-family: 'Cabin', sans-serif;
+  margin-left: 200px;
+  color: #0f1f66;
+  font-weight: 900;
+  font-size: 40px;
+  padding-left: 100px;
+ }
+ .timing-con{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding-right: 180px;
+ }
+ .simple-slider-2{
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 90px;
+ }
+ .simple-slider-4{
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+ }
+ .image-4{
+  max-width: 100%;
+  border: 1px solid #7d7d7d4d;
+  border-radius: 8px;
+  padding-bottom: 70px;
+ cursor: pointer;
+ }
+/* -------------------------------------- */
+.Img-zoom {
+  width: 100%;
+  height: 330px;
+}
+
+.Left-zoom,
+.right-zoom {
+  float: left;
+  width: 50%;
+  margin-top: 0px;
+  font-family: 'Cabin', sans-serif;
+
+}
+.Imgzoom1{
+  margin-top: 40px;
+}
+.Imgzoom1,
+.Imgzoom2 {
+  width: 90%;
+  height: 100%;
+   /* Ensure the image covers the entire container */
+   border-radius: 10px;
+   transition: transform (0.3s);
+}
+
+.ImageText-1, .ImageText-2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  color: #120e4f;
+  /* Add any additional styling you need for the text */
+}
+.ImageText-1{
+  left: 180px;
+  bottom: 150px;
+  width: 200px;
+  font-size: 25px;
+  text-align: left;
+  font-weight: 900;
+}
+.ImageText-1-1{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 246, 246);
+  font-size: 13px;
+  text-align: center;
+  left: 105px;
+  bottom: 240px;
+  width: 50px;
+  background-color: rgb(19, 98, 13);
+  border-radius: 20px;
+}
+.ImageText-2{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-align: left;
+  left: 760px;
+  bottom: 194px;
+  width: 150px;
+  font-weight: 900;
+ 
+}
+.ImageText-1-2{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: rgb(244, 146, 0);
+  font-size: 43px;
+  text-align: center;
+  left: 740px;
+  bottom: 140px;
+  font-weight: 800;
+}
+.Imgzoom1:hover,
+.Imgzoom2:hover {
+  transform: scale(1.1); /* You can adjust the scale factor for the desired zoom effect */
+}
+.Zoom-Btn1{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  padding: 5px;
+  background-color: #0f1f66;
+  color: white;
+  right: 1060px;
+  top: 700px;
+  font-size: 17px;
+  border-radius: 30px;
+  font-family: 'Cabin', sans-serif;
+  transition: background-color 2s;
+}
+.Zoom-Btn2{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  padding: 7px;
+  background-color: #0f1f66;
+  color: white;
+  right: 420px;
+  top: 700px;
+  font-size: 17px;
+  border-radius: 30px;
+  font-family: 'Cabin', sans-serif;
+  transition: background-color 2s;
+}
+.Zoom-Btn1:hover, .Zoom-Btn2:hover{
+  background-color: orange;
+}
+/* =========================================== */
+.Slider-3 {
+  text-align: center;
+}
+
+.image-container-3 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image-item {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  height: 350px; /* Increased height to accommodate text */
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 70%; /* Adjust the image height as needed */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.sort-shop {
+  position: absolute;
+  bottom: 95px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  margin: 0;
+  font-size: 20px;
+  text-align: left;
+  color: #0f1f66;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sort-stars{
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+  text-align: left;
+  color: #ff8000;
+}
+.sort-rate{
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  margin: 0;
+  font-size: 17px;
+  text-align: left;
+}
+/* -------------------------------------------- */
+.photo-gallery-2 {
+  display: flex;
+  width: 80%;
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+.image-wrapper-2 {
+  position: relative;
+  margin: 10px;
+ 
+  
+}
+
+.image-2 {
+  width: 200px; /* Adjust the width of the images as needed */
+  height: 200px; /* Adjust the height of the images as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-image: linear-gradient(to right top, #baeb00, #d7ce00, #ebaf00, #f78f00, #fb6e1b, #ff5739, #ff3f52, #ff296a, #ff238d, #ff30b1, #f046d7, #d55ffb); /* Add a semi-transparent overlay on hover */
+}
+
+.image-wrapper-2:hover .image-2 {
+  transform: scale(1.1); /* Increase the scale on hover */
+}
+
+.image-wrapper-2:hover .overlay-2 {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.instagram-icon-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px; /* Adjust the size of the Instagram icon as needed */
+  color: white; /* Set the color of the Instagram icon */
+
+}
+.Gallery-text{
+  width: 100%;
+  margin-top: 50px;
+  font-size: 29px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 100;
+  color: #10096a;
+  
+}
+/* ----------------------------------------- */
+/* EmailGrid.css */
+
+.Email-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  height: 400px;
+  margin-top: 100px;
+}
+
+.ep-1,
+.ep-3 {
+  flex: 1;
+  opacity: 0.1;
+   /* Take up equal space */
+}
+
+.ep-2 {
+  float: left; /* Float the input to the left */
+  margin: 10px;
+  width: 700px;
+  margin-top: 20px; /* Add some margin for spacing */
+}
+/* Add some basic styling to the button */
+.Email-input{
+  width: 100%;
+    padding: 8px;
+    margin: 10px 0px;
+    background-color: #cccccca9;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    color: #10096a;
+    font-family: 'Cabin', sans-serif ;
+    font-weight: 600;
+    position: relative;
+}
+.btn-email {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: orange;
+  width: 140px;
+  font-family: 'Cabin', sans-serif;
+  border-radius: 30px;
+  transition: background-color 0.5s;
+}
+.email-text{
+  color:rgb(13, 18, 107);
+  padding-bottom: 40px;
+  font-family: 'Cabin', sans-serif;
+}
+/* Define the hover state and the animation */
+.btn-email:hover {
+  border: 1px solid orange;
+ background-color: white;
+  color: rgb(249, 117, 1); /* Change text color on hover */
+}
+/* --------------------- */
+.text-container {
+  display: flex;
+  width: 80%;
+  margin-left: 150px; /* Use "inline-block" if you prefer */
+}
+.tl-1, .tl-2, .tl-3{
+  color:#120e4f;
+  width: 33.3%;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.147);
+  font-size: 17px;
+  font-family: 'Cabin', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.093);
+  padding-top: 10px;
+}
+/* -------------------------------------- */
+/* Footer.css */
+
+.footer {
+  display: flex;
+  width: 80%;
+  margin-left: 150px;
+  margin-top: 50px;
+  height: 330px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.152);
+  /* Add any other styles for the footer */
+}
+.first-1{
+  width: 20%;
+  height: 300px;
+  text-align: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.123);
+  font-family: 'Cabin', sans-serif;
+  color:#0f096ab2;
+}
+.f-1-2{
+  font-size: 17px;
+  margin-top: 20px;
+  font-style: italic;
+}
+.f-1-3{
+  margin-top: 29px;
+  font-size: 20px;
+  justify-content:space-between;
+  cursor: pointer;
+}
+.fb{
+  color: blue;
+}
+.ig{
+  color: rebeccapurple;
+}
+.yt{
+  color: red;
+}
+.pt{
+  color: rgb(92, 19, 19);
+}
+.li{
+  color: #21177e;
+}
+.second-2{
+  width: 35%;
+  height: 300px;
+  text-align: left;
+  padding-left: 30px;
+}
+.s-2-1{
+  color: #10096a;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: 'Cabin', sans-serif ;
+}
+.s-2-2{
+  margin-top: 30px;
+  font-size: 29px;
+  color: #10096a;
+  font-family: 'Cabin', sans-serif ;
+}
+.s-2-3{
+  padding-bottom: 25px;
+  margin-top: 20px;
+  font-size: 15px;
+  width: 220px;
+  color: #120e4fc8;
+  font-family: 'Cabin', sans-serif ;
+}
+.s-2-4{
+  font-size: 15px;
+  font-family: 'Cabin', sans-serif ;
+  border-top: 1px solid rgba(0, 0, 0, 0.149);
+  padding-top: 20px;
+}
+.ph{
+  color: orange;
+}
+.ml{
+  color: red;
+  top: 10px;
+}
+.third-3{
+  width: 40%;
+  height: 300px;
+}
+.third-3 {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+}
+
+.t-3-1,
+.t-3-2,
+.t-3-3 {
+  display: flex;
+  flex-direction: column; /* Adjust as needed */
+}
+.list-item-head{
+  list-style-type: none;
+  text-align: left;
+  margin-left: 4px;
+  padding: 15px;
+  
+  color: #0f1f66;
+  font-weight: 900;
+  font-family: 'Cabin', sans-serif ;
+  font-size: 15px;
+}
+.list-item {
+  list-style-type: none;
+  text-align: left;
+  margin-left: 4px;
+  padding: 15px;
+  font-family: 'Cabin', sans-serif ;
+  cursor: pointer;
+  color: #0f1f66;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 1s;
+}
+.list-item:hover{
+  color: orange;
+  text-decoration: underline;
+}
+.image-logo-footer{
+  width: 150px;
+}
+/* ------------------------------------- */
+.cp-f{
+  width: 80%;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+.copy-l{
+  width: 50%;
+  float: left;
+  text-align: left;
+  color: #0f1f66;
+  font-weight: 500;
+  font-family: 'Cabin', sans-serif ;
+  
+}
+.copy-r{
+  text-align: right;
+  width: 50%;
+  float: right;
+}
+.pay-img{
+  width: 200px;
+}
+/* ------------------------------------ */
+.Error-container{
+  width: 80%;
+  
+  margin: 0 auto;
+}
+.error-left{
+  width: 50%;
+ 
+  text-align: left;
+  float: left;
+}
+.error-right{
+  width: 50%;
+ 
+  float: right;
+}
+.error-image{
+  object-fit: cover;
+  width: 430px;
+  margin-top: 90px;
+}
+.e-404{
+  font-size: 200px;
+  color: #0f1f66;
+  font-family: 'Cabin', sans-serif ;
+}
+.error-text{
+  font-weight: 600;
+  font-size: 46px;
+  color: #0f1f66;
+  font-family: 'Cabin', sans-serif ;
+}
+.error-text-2{
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #0f1f66ae;
+  font-family: 'Cabin', sans-serif ;
+}
+.error-btn{
+  font-family: 'Cabin', sans-serif ;
+  margin-top: 20px;
+  text-align: center;
+  width: 190px;
+  padding: 10px;
+  background-color: #072642;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+.error-btn:hover{
+  background-color: orange;
+  transition: background-color 0.5s;
 }
